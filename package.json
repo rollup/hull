@@ -1,0 +1,48 @@
+{
+  "name": "@rollup-cabal/hull",
+  "version": "1.0.0",
+  "description": "🛳️",
+  "license": "MIT",
+  "repository": "rollup-cabal/hull",
+  "author": "Andrew Powell <andrew@shellscape.org>",
+  "homepage": "https://github.com/rollup-cabal/hull",
+  "main": "dist/index.js",
+  "bin": {
+    "hull": "bin/index.js"
+  },
+  "engines": {
+    "node": ">= 8"
+  },
+  "scripts": {
+    "lint-staged": "lint-staged"
+  },
+  "files": [
+    "bin",
+    "dist",
+    "lib",
+    "src",
+    "templates",
+    "config.json"
+  ],
+  "keywords": [
+    "rollup"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^23.0.1",
+    "lint-staged": "^7.1.0",
+    "pre-commit": "^1.2.2",
+    "prettier": "^1.9.2",
+    "standard-version": "^4.2.0"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "pre-commit": "lint-staged",
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  }
+}
