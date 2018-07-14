@@ -1,25 +1,28 @@
 ---
-name: 🐛 Bug Report
+name: 🐞 Bug Report
 about: Something went awry and you'd like to tell us about it.
 
 ---
 
 <!--
-  ⚡️ katchow! We ❤️ issues.
+  ⚡️ katchow! We 💛 issues.
 
   Please - do not - remove this template.
   Please - do not - skip or remove parts of this template.
   Or your issue may be closed as invalid.
 
   👉🏽 Need support, advice, or help? Don't open an issue!
-  Head to https://gitter.im/rollup/rollup
+  Head to https://gitter.im/rollup/rollup or https://stackoverflow.com/questions/tagged/rollupjs
+
+  ❤️ Rollup? Please consider supporting our collective:
+  👉 https://opencollective.com/rollup/donate
 -->
 
 * Operating System:
 * Node Version:
 * NPM Version:
 * Rollup Version:
-* hull Version:
+* ${package} Version:
 
 ### Expected Behavior
 
@@ -43,6 +46,6 @@ about: Something went awry and you'd like to tell us about it.
 <!--
   Remove this section if not reporting a bug.
 
-  If your Rollup config is over 50 lines long, please provide a URL to a repo
-  for your beefy 🍖 app that we can use to reproduce.
+  If your Rollup config is meaty 🍖 and over 50 lines long, please provide a URL
+  to a repo for your app that we can use to reproduce.
 -->

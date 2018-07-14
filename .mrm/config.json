@@ -1,0 +1,14 @@
+{
+  "tasks": [
+    "babel",
+    "codecov",
+    "eslint",
+    "git",
+    "issue_template",
+    "package",
+    "readme",
+    "templates"
+  ],
+  "rollupVersion": "latest",
+  "activeLTS": "8.11.0"
+}
