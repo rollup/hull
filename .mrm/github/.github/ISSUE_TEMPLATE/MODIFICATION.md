@@ -21,8 +21,8 @@ about: Would you like something work differently? Have an alternative approach? 
 * Operating System:
 * Node Version:
 * NPM Version:
-* webpack Version:
-* webpack-defaults Version:
+* Rollup Version:
+* ${package} Version:
 
 ### Expected Behavior / Situation
 

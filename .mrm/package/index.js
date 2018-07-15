@@ -30,16 +30,15 @@ const devDependencies = [
   'eslint',
   'eslint-plugin-import',
   'eslint-plugin-prettier',
-  '@webpack-contrib/eslint-config-webpack',
   'lint-staged',
   'pre-commit',
   'prettier',
 
-  // Webpack
-  'webpack',
+  'rollup'
 ];
 
-module.exports = (config) => {
+module.exports = () => {
+  const { activeLTS, rollupVersion } = require('../config.json');
   const { name } = meta;
   const github = gitUsername();
   const {name: packageName = basename(process.cwd()) } = json('package.json');
@@ -61,7 +60,7 @@ module.exports = (config) => {
       bin: existing.bin || '',
       main: existing.main || '',
       engines: {
-        node: `>= ${config.activeLTS}`,
+        node: `>= ${activeLTS}`,
       },
       scripts: {
         commitlint: 'commitlint',
@@ -80,7 +79,7 @@ module.exports = (config) => {
         hull: 'hull',
       },
       files: existing.files || ['dist/', 'lib/', 'index.js'],
-      peerDependencies: existing.peerDependencies || { webpack: '^${config.rollupVersion}' },
+      peerDependencies: existing.peerDependencies || { rollup: `^${rollupVersion}` },
       dependencies: existing.dependencies || {},
       devDependencies: existing.devDependencies || {},
       keywords: existing.keywords || ['rollup'],

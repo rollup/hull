@@ -13,7 +13,7 @@ version: 2
 jobs:
   dependency_cache:
     docker:
-      - image: webpackcontrib/circleci-node-base:latest
+      - image: rollupcabal/circleci-node-base:latest
     steps:
       - checkout
       - restore_cache:
@@ -27,7 +27,7 @@ jobs:
             - ./node_modules
   node8-latest:
     docker:
-      - image: webpackcontrib/circleci-node8:latest
+      - image: rollupcabal/circleci-node8:latest
     steps:
       - checkout
       - restore_cache:
@@ -44,11 +44,11 @@ jobs:
           when: on_success
   node10-latest:
     docker:
-      - image: webpackcontrib/circleci-node10:latest
+      - image: rollupcabal/circleci-node10:latest
     <<: *unit_tests
   analysis:
     docker:
-      - image: webpackcontrib/circleci-node-base:latest
+      - image: rollupcabal/circleci-node-base:latest
     steps:
       - checkout
       - restore_cache:
@@ -67,7 +67,7 @@ jobs:
           command: npm run ci:lint:commits
   publish:
     docker:
-      - image: webpackcontrib/circleci-node-base:latest
+      - image: rollupcabal/circleci-node-base:latest
     steps:
       - checkout
       - restore_cache:

@@ -9,12 +9,11 @@ const files = [
   '.vscode/launch.json',
   '.vscode/settings.json',
   '.editorconfig',
-  '.eslintrc.json',
   '.prettierrc',
   'commitlint.config.js',
   'LICENSE',
   'tsconfig.json',
-  'tslin.json',
+  'tslint.json',
 ];
 
 module.exports = () => {

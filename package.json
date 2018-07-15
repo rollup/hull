@@ -6,7 +6,7 @@
   "repository": "rollup-cabal/hull",
   "author": "Andrew Powell <andrew@shellscape.org>",
   "homepage": "https://github.com/rollup-cabal/hull",
-  "main": "dist/index.js",
+  "main": "src/index.js",
   "bin": {
     "hull": "bin/index.js"
   },
@@ -32,13 +32,14 @@
   "dependencies": {
     "chalk": "^2.4.1",
     "execa": "^0.10.0",
-    "ora": "^2.1.0"
-  },
-  "devDependencies": {
-    "jest": "^23.0.1",
-    "lint-staged": "^7.1.0",
+    "merge-options": "^1.0.1",
     "mrm": "^1.2.1",
     "mrm-core": "^3.1.3",
+    "ora": "^2.1.0",
+    "strip-ansi": "^4.0.0"
+  },
+  "devDependencies": {
+    "lint-staged": "^7.1.0",
     "pre-commit": "^1.2.2",
     "prettier": "^1.9.2",
     "standard-version": "^4.2.0"

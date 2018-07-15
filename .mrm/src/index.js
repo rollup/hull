@@ -6,6 +6,8 @@ module.exports = () => {
   const src = template('src/index.ts', join(__dirname, 'index.ts'));
 
   if (!src.exists()) {
-    src.save();
+    src
+      .apply({})
+      .save();
   }
 };

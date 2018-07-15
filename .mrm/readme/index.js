@@ -3,7 +3,8 @@ const { join } = require('path');
 const { json, template } = require('mrm-core');
 
 module.exports = () => {
-  const { name } = json('package.json');
+  const { activeLTS } = require('../config.json');
+  const { description, name } = json('package.json').get();
   const readme = template('README.md', join(__dirname, './README.md'));
 
   if (!readme.exists()) {
@@ -11,7 +12,7 @@ module.exports = () => {
       name.replace(name.charAt(0), name.charAt(0).toUpperCase());
 
     readme
-      .apply({package: name})
+      .apply({activeLTS, description, name})
       .save();
   }
 };
