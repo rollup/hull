@@ -1,21 +1,21 @@
 module.exports = {
   env: {
-    es6: true,
+    es6: true
   },
   parserOptions: {
     ecmaVersion: 6,
     sourceType: 'module',
     ecmaFeatures: {
       generators: false,
-      objectLiteralDuplicateProperties: false,
-    },
+      objectLiteralDuplicateProperties: false
+    }
   },
 
   rules: {
     // require braces around arrow function bodies
     // http://eslint.org/docs/rules/arrow-body-style
     'arrow-body-style': ['error', 'as-needed', {
-      requireReturnForObjectLiteral: true,
+      requireReturnForObjectLiteral: true
     }],
 
     // require parentheses around arrow function arguments
@@ -83,7 +83,7 @@ module.exports = {
     'no-useless-rename': ['error', {
       ignoreDestructuring: false,
       ignoreImport: false,
-      ignoreExport: false,
+      ignoreExport: false
     }],
 
     // require let or const instead of var
@@ -94,30 +94,30 @@ module.exports = {
     // http://eslint.org/docs/rules/object-shorthand
     'object-shorthand': ['error', 'always', {
       ignoreConstructors: false,
-      avoidQuotes: true,
+      avoidQuotes: true
     }],
 
     // require arrow functions as callbacks
     // http://eslint.org/docs/rules/prefer-arrow-callback
     'prefer-arrow-callback': ['warn', {
       allowNamedFunctions: false,
-      allowUnboundThis: true,
+      allowUnboundThis: true
     }],
 
     // require const declarations for variables that are never reassigned after declared
     // http://eslint.org/docs/rules/prefer-const
     'prefer-const': ['error', {
       destructuring: 'any',
-      ignoreReadBeforeAssign: true,
+      ignoreReadBeforeAssign: true
     }],
 
     // require destructuring from arrays and/or objects
     // http://eslint.org/docs/rules/prefer-destructuring
     'prefer-destructuring': ['warn', {
       array: true,
-      object: true,
+      object: true
     }, {
-      enforceForRenamedProperties: false,
+      enforceForRenamedProperties: false
     }],
 
     // disallow parseInt() in favor of binary, octal, and hexadecimal literals
@@ -150,7 +150,7 @@ module.exports = {
     'sort-imports': ['off', {
       ignoreCase: false,
       ignoreMemberSort: false,
-      memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
+      memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single']
     }],
 
     // require symbol descriptions
@@ -165,6 +165,6 @@ module.exports = {
     // require or disallow spacing around the * in yield* expressions
     // http://eslint.org/docs/rules/yield-star-spacing
     // This is handled by Prettier in Defaults 2.0
-    'yield-star-spacing': 'off',
-  },
+    'yield-star-spacing': 'off'
+  }
 };

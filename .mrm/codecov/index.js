@@ -5,7 +5,7 @@ module.exports = () => {
   yaml('codecov.yml')
     .set({
       codecov: {
-        branch: 'master',
+        branch: 'master'
       },
       coverage: {
         precision: 2,
@@ -13,10 +13,10 @@ module.exports = () => {
         range: '70...100',
         status: {
           project: 'no',
-          patch: 'yes',
-        },
+          patch: 'yes'
+        }
       },
-      comment: 'off',
+      comment: 'off'
     })
     .save();
 };

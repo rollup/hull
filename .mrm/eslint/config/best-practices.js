@@ -15,7 +15,7 @@ module.exports = {
     // enforce that class methods utilize this
     // http://eslint.org/docs/rules/class-methods-use-this
     'class-methods-use-this': ['error', {
-      exceptMethods: [],
+      exceptMethods: []
     }],
 
     // enforce a maximum cyclomatic complexity allowed in a program
@@ -78,8 +78,8 @@ module.exports = {
       allow: [
         'arrowFunctions',
         'functions',
-        'methods',
-      ],
+        'methods'
+      ]
     }],
 
     // disallow empty destructuring patterns
@@ -125,7 +125,7 @@ module.exports = {
       boolean: false,
       number: true,
       string: true,
-      allow: [],
+      allow: []
     }],
 
     // disallow variable and function declarations in the global scope
@@ -162,7 +162,7 @@ module.exports = {
       ignore: [],
       ignoreArrayIndexes: true,
       enforceConst: true,
-      detectObjects: false,
+      detectObjects: false
     }],
 
     // disallow multiple spaces
@@ -211,17 +211,17 @@ module.exports = {
     'no-restricted-properties': ['error', {
       object: 'arguments',
       property: 'callee',
-      message: 'arguments.callee is deprecated',
+      message: 'arguments.callee is deprecated'
     }, {
       property: '__defineGetter__',
-      message: 'Please use Object.defineProperty instead.',
+      message: 'Please use Object.defineProperty instead.'
     }, {
       property: '__defineSetter__',
-      message: 'Please use Object.defineProperty instead.',
+      message: 'Please use Object.defineProperty instead.'
     }, {
       object: 'Math',
       property: 'pow',
-      message: 'Use the exponentiation operator (**) instead.',
+      message: 'Use the exponentiation operator (**) instead.'
     }],
 
     // disallow assignment operators in return statements
@@ -260,7 +260,7 @@ module.exports = {
     // http://eslint.org/docs/rules/no-unused-expressions
     'no-unused-expressions': ['error', {
       allowShortCircuit: false,
-      allowTernary: false,
+      allowTernary: false
     }],
 
     // disallow unused labels
@@ -318,6 +318,6 @@ module.exports = {
 
     // require or disallow “Yoda” conditions
     // http://eslint.org/docs/rules/yoda
-    yoda: 'error',
-  },
+    yoda: 'error'
+  }
 };

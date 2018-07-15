@@ -1,6 +1,3 @@
-const { resolve } = require('path');
-
-const pathExists = require('path-exists');
 const { copyFiles } = require('mrm-core');
 
 const files = [
@@ -11,7 +8,7 @@ const files = [
   '.github/ISSUE_TEMPLATE/SUPPORT.md',
   '.github/PULL_REQUEST_TEMPLATE.md',
   '.github/CONTRIBUTING.md',
-  '.github/ISSUE_TEMPLATE.md',
+  '.github/ISSUE_TEMPLATE.md'
 ];
 
 module.exports = () => {

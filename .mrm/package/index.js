@@ -34,10 +34,14 @@ const devDependencies = [
   'pre-commit',
   'prettier',
 
-  'rollup'
+  'rollup',
+
+  'tslint',
+  'typescript'
 ];
 
 module.exports = () => {
+  // eslint-disable-next-line import/no-dynamic-require, global-require
   const { activeLTS, rollupVersion } = require('../config.json');
   const { name } = meta;
   const github = gitUsername();
@@ -60,7 +64,7 @@ module.exports = () => {
       bin: existing.bin || '',
       main: existing.main || '',
       engines: {
-        node: `>= ${activeLTS}`,
+        node: `>= ${activeLTS}`
       },
       scripts: {
         commitlint: 'commitlint',
@@ -76,7 +80,7 @@ module.exports = () => {
         'ci:lint': 'npm run lint && npm run security',
         'ci:test': 'npm run test -- --runInBand',
         'ci:coverage': 'npm run test:coverage -- --runInBand',
-        hull: 'hull',
+        hull: 'hull'
       },
       files: existing.files || ['dist/', 'lib/', 'index.js'],
       peerDependencies: existing.peerDependencies || { rollup: `^${rollupVersion}` },
@@ -100,12 +104,12 @@ module.exports = () => {
         ],
         transform: {
           '^.+\\.(ts)$': 'ts-jest'
-        },
+        }
       },
       'pre-commit': 'lint-staged',
       'lint-staged': {
-        '*.js': ['tslint --project . --fix', 'eslint --fix', 'git add'],
-      },
+        '*.js': ['tslint --project . --fix', 'eslint --fix', 'git add']
+      }
     })
     .save();
   install(dependencies, { dev: false });

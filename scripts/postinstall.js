@@ -1,4 +1,5 @@
 const { resolve } = require('path');
+
 const { json } = require('mrm-core');
 
 const localPath = process.cwd().split('node_modules').shift();

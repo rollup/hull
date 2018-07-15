@@ -14,13 +14,13 @@ const gitignore = [
   '/dist',
   '/local',
   '/node_modules',
-  '/reports',
+  '/reports'
 ];
 
 const gitattributes = [
   'package-lock.json -diff',
   '* text=auto',
-  'bin/* eol=lf',
+  'bin/* eol=lf'
 ];
 
 module.exports = () => {

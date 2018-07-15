@@ -11,12 +11,11 @@ module.exports = () => {
     './config/node',
     './config/possible-errors',
     './config/style',
-    './config/variables',
+    './config/variables'
   ];
 
-  const eslintrc = configs.reduce((result, config) => {
-    return merge(result, require(config));
-  }, {});
+  // eslint-disable-next-line import/no-dynamic-require, global-require
+  const eslintrc = configs.reduce((result, config) => merge(result, require(config)), {});
 
   json('.eslintrc.json', eslintrc)
     .save();

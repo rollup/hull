@@ -25,19 +25,19 @@ module.exports = {
       line: {
         ignorePattern: '.*',
         ignoreInlineComments: true,
-        ignoreConsecutiveComments: true,
+        ignoreConsecutiveComments: true
       },
       block: {
         ignorePattern: '.*',
         ignoreInlineComments: true,
-        ignoreConsecutiveComments: true,
-      },
+        ignoreConsecutiveComments: true
+      }
     }],
 
     // require trailing commas in multiline object literals
     // http://eslint.org/docs/rules/comma-dangle
     // This is handled by Prettier in Defaults 2.0
-    'comma-dangle': 'off',
+    'comma-dangle': ["error", "never"],
 
     // enforce consistent spacing before and after commas
     // http://eslint.org/docs/rules/comma-spacing
@@ -71,7 +71,7 @@ module.exports = {
     // require function names to match the name of the variable or property to which they are assigned
     // http://eslint.org/docs/rules/func-name-matching
     'func-name-matching': ['off', 'always', {
-      includeCommonJSModuleExports: false,
+      includeCommonJSModuleExports: false
     }],
 
     // require or disallow named function expressions
@@ -118,7 +118,7 @@ module.exports = {
     'line-comment-position': ['error', {
       position: 'above',
       ignorePattern: '',
-      applyDefaultPatterns: true,
+      applyDefaultPatterns: true
     }],
 
     // enforce consistent linebreak style
@@ -133,7 +133,7 @@ module.exports = {
     // http://eslint.org/docs/rules/lines-around-directive
     'lines-around-directive': ['error', {
       before: 'always',
-      after: 'always',
+      after: 'always'
     }],
 
     // enforce a maximum depth that blocks can be nested
@@ -150,7 +150,7 @@ module.exports = {
     'max-lines': ['off', {
       max: 300,
       skipBlankLines: true,
-      skipComments: true,
+      skipComments: true
     }],
 
     // enforce a maximum depth that callbacks can be nested
@@ -180,7 +180,7 @@ module.exports = {
       newIsCap: true,
       newIsCapExceptions: [],
       capIsNew: false,
-      capIsNewExceptions: ['Immutable.Map', 'Immutable.Set', 'Immutable.List'],
+      capIsNewExceptions: ['Immutable.Map', 'Immutable.Set', 'Immutable.List']
     }],
 
     // require parentheses when invoking a constructor with no arguments
@@ -261,7 +261,7 @@ module.exports = {
     'no-restricted-syntax': [
       'error',
       'LabeledStatement',
-      'WithStatement',
+      'WithStatement'
     ],
 
     // disallow tab characters entirely
@@ -391,13 +391,13 @@ module.exports = {
     'spaced-comment': ['error', 'always', {
       line: {
         exceptions: ['-', '+'],
-        markers: ['=', '!'],
+        markers: ['=', '!']
       },
       block: {
         exceptions: ['-', '+'],
         markers: ['=', '!'],
-        balanced: false,
-      },
+        balanced: false
+      }
     }],
 
     // require or disallow Unicode byte order mark (BOM)
@@ -408,6 +408,6 @@ module.exports = {
     // require parenthesis around regex literals
     // http://eslint.org/docs/rules/wrap-regex
     // This is handled by Prettier in Defaults 2.0
-    'wrap-regex': 'off',
-  },
+    'wrap-regex': 'off'
+  }
 };
