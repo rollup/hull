@@ -5,9 +5,9 @@ const meta = require('user-meta');
 const gitUsername = require('git-username');
 const { json, install } = require('mrm-core');
 
-const packages = ['@webpack-contrib/schema-utils', 'loader-utils'];
+const dependencies = [];
 
-const devPackages = [
+const devDependencies = [
   // Utilities
   'standard-version',
   '@commitlint/cli',
@@ -77,7 +77,7 @@ module.exports = (config) => {
         'ci:lint': 'npm run lint && npm run security',
         'ci:test': 'npm run test -- --runInBand',
         'ci:coverage': 'npm run test:coverage -- --runInBand',
-        hull: 'npx mrm',
+        hull: 'hull',
       },
       files: existing.files || ['dist/', 'lib/', 'index.js'],
       peerDependencies: existing.peerDependencies || { webpack: '^${config.rollupVersion}' },
@@ -109,6 +109,6 @@ module.exports = (config) => {
       },
     })
     .save();
-  install(packages, { dev: false });
-  install(devPackages);
+  install(dependencies, { dev: false });
+  install(devDependencies);
 };

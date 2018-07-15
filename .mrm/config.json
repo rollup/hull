@@ -1,14 +1,28 @@
 {
+  "activeLTS": "8.11.0",
+  "aliases": {
+    "hull": [
+      "codecov",
+      "eslint",
+      "git",
+      "github",
+      "package",
+      "readme",
+      "src",
+      "templates",
+      "test"
+    ]
+  },
+  "rollupVersion": "latest",
   "tasks": [
-    "babel",
     "codecov",
     "eslint",
     "git",
-    "issue_template",
+    "github",
     "package",
     "readme",
-    "templates"
-  ],
-  "rollupVersion": "latest",
-  "activeLTS": "8.11.0"
+    "src",
+    "templates",
+    "test"
+  ]
 }

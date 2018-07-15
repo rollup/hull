@@ -19,7 +19,23 @@
 
 ${description}
 
-### Meta
+_Note: This module requires Node ${config.activeLTS}._
+
+## Install
+
+Using npm:
+
+```console
+npm install ${package} --save-dev
+```
+
+Using yarn:
+
+```console
+yarn add ${package} --dev
+```
+
+## Meta
 
 [CONTRIBUTING](./.github/CONTRIBUTING)
 
