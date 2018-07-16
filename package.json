@@ -34,6 +34,7 @@
     ".mrm",
     "bin",
     "labels",
+    "scripts",
     "src",
     "templates"
   ],
