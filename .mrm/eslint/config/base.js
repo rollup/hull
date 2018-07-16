@@ -1,10 +1,7 @@
 module.exports = {
   parserOptions: {
     ecmaVersion: 2017,
-    sourceType: 'module',
-    ecmaFeatures: {
-      experimentalObjectRestSpread: true
-    }
+    sourceType: 'module'
   },
   rules: {
     strict: 'error'
