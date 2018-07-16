@@ -1,6 +1,9 @@
 {
-  "name": "hull",
+  "name": "@rollup-cabal/hull",
   "version": "0.1.0",
+  "publishConfig": {
+    "access": "public"
+  },
   "description": "🛳️",
   "license": "MIT",
   "repository": "rollup-cabal/hull",
@@ -28,6 +31,7 @@
   },
   "files": [
     ".mrm",
+    "bin",
     "labels",
     "src",
     "templates"
