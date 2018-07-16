@@ -18,15 +18,16 @@
     "node": ">= 8.11.0"
   },
   "scripts": {
+    "ci:lint": "npm run lint && npm run security",
+    "ci:lint:commits": "commitlint --from=${CIRCLE_BRANCH} --to=${CIRCLE_SHA1}",
+    "ci:test": "echo \"no tests\"",
+    "ci:coverage": "echo \"no coverage\"",
     "commitlint": "commitlint",
     "commitmsg": "commitlint -e $GIT_PARAMS",
     "lint": "eslint --cache .mrm bin scripts src",
-    "ci:lint:commits": "commitlint --from=${CIRCLE_BRANCH} --to=${CIRCLE_SHA1}",
     "lint-staged": "lint-staged",
+    "postinstall": "node ./scripts/postinstall",
     "security": "npm audit",
-    "ci:lint": "npm run lint && npm run security",
-    "ci:test": "echo \"no tests\"",
-    "ci:coverage": "echo \"no coverage\"",
     "hull": "hull"
   },
   "files": [
