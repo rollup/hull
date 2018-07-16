@@ -67,20 +67,20 @@ module.exports = () => {
         node: `>= ${activeLTS}`
       },
       scripts: {
-        commitlint: 'commitlint',
-        commitmsg: 'commitlint -e $GIT_PARAMS',
-        lint: 'tslint --project . && eslint --cache src test',
+        'ci:coverage': 'npm run test:coverage -- --runInBand',
+        'ci:lint': 'npm run lint && npm run security',
         'ci:lint:commits':
           'commitlint --from=${CIRCLE_BRANCH} --to=${CIRCLE_SHA1}',
+        'ci:test': 'npm run test -- --runInBand',
+        commitlint: 'commitlint',
+        commitmsg: 'commitlint -e $GIT_PARAMS',
+        hull: 'hull',
+        lint: 'tslint --project . && eslint --cache src test',
         'lint-staged': 'lint-staged',
         security: 'npm audit',
         test: 'jest',
         'test:watch': 'jest --watch',
-        'test:coverage': 'jest --collectCoverageFrom="src/**/*.ts" --coverage',
-        'ci:lint': 'npm run lint && npm run security',
-        'ci:test': 'npm run test -- --runInBand',
-        'ci:coverage': 'npm run test:coverage -- --runInBand',
-        hull: 'hull'
+        'test:coverage': 'jest --collectCoverageFrom="src/**/*.ts" --coverage'
       },
       files: existing.files || ['dist/', 'lib/', 'index.js'],
       peerDependencies: existing.peerDependencies || { rollup: `^${rollupVersion}` },
@@ -108,7 +108,7 @@ module.exports = () => {
       },
       'pre-commit': 'lint-staged',
       'lint-staged': {
-        '*.js': ['tslint --project . --fix', 'eslint --fix', 'git add']
+        '*.js': ['tslint --fix', 'eslint --fix', 'git add']
       }
     })
     .save();
