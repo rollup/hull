@@ -63,7 +63,7 @@ module.exports = () => {
       homepage: `https://github.com/${repository}`,
       bugs: `https://github.com/${repository}/issues`,
       bin: existing.bin || '',
-      main: existing.main || '',
+      main: existing.main || 'dist/index.js',
       engines: {
         node: `>= ${activeLTS}`
       },
