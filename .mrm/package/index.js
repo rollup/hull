@@ -9,11 +9,12 @@ const dependencies = [];
 
 const devDependencies = [
   // Utilities
-  'standard-version',
   '@commitlint/cli',
   '@commitlint/config-conventional',
   'conventional-github-releaser',
+  'del-cli',
   'husky',
+  'standard-version',
 
   // Jest
   '@types/jest',
@@ -45,7 +46,7 @@ module.exports = () => {
   const { activeLTS, rollupVersion } = require('../config.json');
   const { name } = meta;
   const github = gitUsername();
-  const {name: packageName = basename(process.cwd()) } = json('package.json');
+  const { name: packageName = basename(process.cwd()) } = json('package.json');
   const repository = `${github}/${packageName}`;
 
   const file = json('package.json');
@@ -67,20 +68,22 @@ module.exports = () => {
         node: `>= ${activeLTS}`
       },
       scripts: {
+        build: 'npm run build:clean && tsc',
+        'build:clean': 'del-cli dist',
         'ci:coverage': 'npm run test:coverage -- --runInBand',
         'ci:lint': 'npm run lint && npm run security',
-        'ci:lint:commits':
-          'commitlint --from=${CIRCLE_BRANCH} --to=${CIRCLE_SHA1}',
+        'ci:lint:commits': 'commitlint --from=${CIRCLE_BRANCH} --to=${CIRCLE_SHA1}',
         'ci:test': 'npm run test -- --runInBand',
         commitlint: 'commitlint',
         commitmsg: 'commitlint -e $GIT_PARAMS',
         hull: 'hull',
         lint: 'tslint --project . && eslint --cache src test',
         'lint-staged': 'lint-staged',
+        prepublishOnly: 'npm run build',
         security: 'npm audit',
-        test: 'jest',
-        'test:watch': 'jest --watch',
-        'test:coverage': 'jest --collectCoverageFrom="src/**/*.ts" --coverage'
+        test: 'npm run build && jest',
+        'test:watch': 'npm run test -- --watch',
+        'test:coverage': 'npm run test -- --collectCoverageFrom="src/**/*.ts" --coverage'
       },
       files: existing.files || ['dist/', 'lib/', 'index.js'],
       peerDependencies: existing.peerDependencies || { rollup: `^${rollupVersion}` },
@@ -88,20 +91,14 @@ module.exports = () => {
       devDependencies: existing.devDependencies || {},
       keywords: existing.keywords || ['rollup'],
       jest: {
-        moduleFileExtensions: [
-          'ts',
-          'tsx',
-          'js'
-        ],
+        moduleFileExtensions: ['ts', 'tsx', 'js'],
         globals: {
           'ts-jest': {
-            'tsConfigFile': 'tsconfig.json'
+            tsConfigFile: 'tsconfig.json'
           }
         },
         testEnvironment: 'node',
-        testMatch: [
-          '**/test/*.+(ts)'
-        ],
+        testMatch: ['**/test/*.+(ts)'],
         transform: {
           '^.+\\.(ts)$': 'ts-jest'
         }

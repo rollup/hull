@@ -8,6 +8,10 @@
     }
   },
   "rules": {
+    "prettier/prettier": [
+      "error",
+      { "arrowParens": "always", "singleQuote": true, "trailingComma": "none" }
+    ],
     "strict": "error",
     "accessor-pairs": "off",
     "array-callback-return": "error",
@@ -661,7 +665,8 @@
     "mocha": true
   },
   "plugins": [
-    "import"
+    "import",
+    "prettier"
   ],
   "settings": {
     "import/resolver": {
