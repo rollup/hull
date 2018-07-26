@@ -7,8 +7,9 @@ module.exports = () => {
   const test = template('test/test.ts', join(__dirname, './test.ts'));
 
   if (!test.exists()) {
+    // prettier-ignore
     test
-      .apply({package: name.replace('@rollup-cabal/', '')})
+      .apply({ package: name.replace('@rollup-cabal/', '') })
       .save();
   }
 };

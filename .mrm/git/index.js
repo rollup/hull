@@ -17,11 +17,7 @@ const gitignore = [
   '/reports'
 ];
 
-const gitattributes = [
-  'package-lock.json -diff',
-  '* text=auto',
-  'bin/* eol=lf'
-];
+const gitattributes = ['package-lock.json -diff', '* text=auto', 'bin/* eol=lf'];
 
 module.exports = () => {
   lines('.gitignore')

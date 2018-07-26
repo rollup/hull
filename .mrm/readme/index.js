@@ -9,8 +9,6 @@ module.exports = () => {
   const readme = template('README.md', join(__dirname, './README.md'));
 
   if (!readme.exists()) {
-    readme
-      .apply({activeLTS, description, name})
-      .save();
+    readme.apply({ activeLTS, description, name }).save();
   }
 };

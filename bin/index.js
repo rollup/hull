@@ -14,7 +14,7 @@ const args = ['mrm', '--dir', join(__dirname, '../.mrm'), 'hull'];
 
 (async () => {
   try {
-  	const proc = execa('npx', args);
+    const proc = execa('npx', args);
 
     proc.stdout.on('data', (buffer) => {
       const line = strip(buffer.toString()).trim();
@@ -27,7 +27,7 @@ const args = ['mrm', '--dir', join(__dirname, '../.mrm'), 'hull'];
   } catch (error) {
     spinner.stop();
     log(chalk`{red ⓡ}  Hull Configuration Failed`);
-  	log(error);
+    log(error);
     process.exitCode = error.code;
   }
 })();
