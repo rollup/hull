@@ -5,7 +5,7 @@
   of Github will appear and pile-drive the close button from a great height
   while making animal noises.
 
-  Please place an x (no spaces!) in all [ ] that apply
+  Please place an x (no spaces - [x]) in all [ ] that apply.
 -->
 
 This PR contains:
