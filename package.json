@@ -1,5 +1,5 @@
 {
-  "name": "@rollup-cabal/hull",
+  "name": "@rollup/hull",
   "version": "0.1.3",
   "publishConfig": {
     "access": "public"
@@ -30,14 +30,7 @@
     "security": "npm audit",
     "hull": "hull"
   },
-  "files": [
-    ".mrm",
-    "bin",
-    "labels",
-    "scripts",
-    "src",
-    "templates"
-  ],
+  "files": [".mrm", "bin", "labels", "scripts", "src", "templates"],
   "dependencies": {
     "chalk": "^2.4.1",
     "execa": "^0.10.0",
@@ -63,14 +56,9 @@
     "rollup": "^0.62.0",
     "standard-version": "^4.2.0"
   },
-  "keywords": [
-    "rollup"
-  ],
+  "keywords": ["rollup"],
   "pre-commit": "lint-staged",
   "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "git add"
-    ]
+    "*.js": ["eslint --fix", "git add"]
   }
 }

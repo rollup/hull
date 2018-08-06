@@ -21,7 +21,7 @@ about: Something went awry and you'd like to tell us about it.
 - Rollup Version:
 - Operating System (or Browser):
 - Node Version:
-- ${package} Version:
+- hull Version:
 
 ### How Do We Reproduce?
 

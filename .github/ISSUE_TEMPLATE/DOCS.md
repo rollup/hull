@@ -1,6 +1,6 @@
 ---
-name: ✨ Feature Request
-about: Suggest an idea for this project
+name: 📚 Documentation
+about: Are the docs lacking or missing something? Do they need some new 🔥 hotness? Tell us here.
 
 ---
 
@@ -11,14 +11,23 @@ about: Suggest an idea for this project
   Please - do not - skip or remove parts of this template.
   Or your issue may be closed.
 
-  👉🏽 Need help or tech support? Please don't open an issue!
+  👉🏽 Need help or tech support? Don't open an issue!
   Head to https://gitter.im/rollup/rollup or https://stackoverflow.com/questions/tagged/rollupjs
 
   ❤️ Rollup? Please consider supporting our collective:
   👉 https://opencollective.com/rollup/donate
 -->
 
-### Feature Use Case
+Documentation Is:
+
+<!-- Please place an x (no spaces!) in all [ ] that apply -->
+
+- [ ] Missing
+- [ ] Needed
+- [ ] Confusing
+- [ ] Not Sure?
+
+### Please Explain in Detail...
 
 
-### Feature Proposal
+### Your Proposal for Changes
